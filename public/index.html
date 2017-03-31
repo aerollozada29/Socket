@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Socket Chat App</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        
+        <center><h1>Socket.io Client Chat Demo</h1></center>
+        
+        <ul id="messages"></ul>
+        
+        <form action="">
+            
+            <input type="text" id="m" placeholder="Type a message.."><br>
+            <button>Send</button>
+            
+            
+        </form>
+        
+        <input type="text" id="username" placeholder="Username"><br>
+        <button onclick="sendUser()" id="u">Submit</button>
+       
+       
+<!--        <script src="/socket.io/socket.io.js"></script>-->
+        <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+        <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+        
+        <script>
+            var user;
+            var socket = io.connect();
+            
+            $(function () {
+                
+                $('form').submit(function() {
+                    socket.emit('chat message', $('#m').val());
+                    $('#m').val('');
+                    return false;
+                });
+                
+                socket.on('chat message', function(user, msg) {
+                    $('#messages').append($('<li>').text(user + ": " + msg));
+//                    window.scrollTo(0, document.body.scrollHeight);
+                });
+                
+                
+            });
+           
+            function sendUser() {
+                var username = document.getElementById("username").value;
+                
+                socket.emit('newUser', username);
+                
+	       }
+
+            socket.on('user', function(data)
+            {
+                user = data;
+            })
+                
+        </script>
+        
+        
+    </body>
+
+</html>

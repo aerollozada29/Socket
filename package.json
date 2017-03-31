@@ -1,0 +1,14 @@
+{
+  "name": "socketca",
+  "version": "0.0.1",
+  "description": "CA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aerol Lozada",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}

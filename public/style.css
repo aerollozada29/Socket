@@ -1,0 +1,63 @@
+body {
+    background-color: #ecf0f1;
+    font: 15px Helvetica, Arial;
+}
+
+h1 {
+    color: #2980b9;
+}
+
+#messages {
+    list-style-type: none;
+    margin-left: 900px;
+}
+
+form {
+    position: fixed;
+    bottom: 0;
+    width: 50%;
+    margin-left: 800px;
+    margin-bottom: 500px;
+}
+
+form button {
+    background-color: #2980b9;
+    border: none;
+    color: aliceblue;
+    padding: 15px 32px;
+    margin-top: 10px;
+    margin-left: 115px;
+    text-align: center;
+    font-size: 15px;
+}
+
+form input {
+    width: 35%;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+input#username {
+    margin-left: 800px;
+    position: fixed;
+    width: 17%;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 650px;
+}
+
+button#u {
+    margin-left: 910px;
+    margin-top: 30px;
+    background-color: #2980b9;
+    border: none;
+    color: aliceblue;
+    padding: 15px 32px;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 600px;
+}
